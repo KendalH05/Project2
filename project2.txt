@@ -1,0 +1,4 @@
+.data
+    message1: .asciiz "Input is empty"
+    message2: .asciiz "Input is too long"
+    message3: .asciiz "Invalid base-N number"
