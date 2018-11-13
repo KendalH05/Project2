@@ -2,3 +2,6 @@
     message1: .asciiz "Input is empty"
     message2: .asciiz "Input is too long"
     message3: .asciiz "Invalid base-N number"
+    userinput: .space 20
+    newline:    .asciiz "\n"
+    space:    .asciiz " "
