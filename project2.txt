@@ -28,3 +28,6 @@
          #add $a0, $0, $t1 
          #syscall
          beqz $t1, empty #branch statement to determine if it empty
+         addi $t0, $t0, 1 
+         addi $t1, $t1, 1
+         j    loop
