@@ -26,3 +26,5 @@
          subi $t1, $t1, 1 #to remove the null character
          #li $v0, 1  #to print the integer
          #add $a0, $0, $t1 
+         #syscall
+         beqz $t1, empty #branch statement to determine if it empty
