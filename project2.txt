@@ -1,7 +1,7 @@
 .data
     message1: .asciiz "Input is empty"
     message2: .asciiz "Input is too long"
-    message3: .asciiz "Invalid base-N number"
+    message3: .asciiz "Invalid base-36 number"
     userinput: .space 20
     newline:   .asciiz "\n"
     space:     .asciiz " "
@@ -37,3 +37,9 @@ empty:
         la $a0, message1 #displays input is empty
         syscall
         j  end
+
+Greater:
+       li $v0, 4
+       la $a0, message2 #displays input is too long
+       syscall
+       j end
