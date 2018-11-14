@@ -43,3 +43,8 @@ Greater:
        la $a0, message2 #displays input is too long
        syscall
        j end
+check:  
+   	la $t5, userinput
+   	li $t3, 1
+       loop2: 
+           bgt $t0, $t1, solve #checks if t0 is greater than t1 then go to solve
