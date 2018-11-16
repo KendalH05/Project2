@@ -55,7 +55,17 @@ check:
            sltiu $t2, $t2, 10 #checks if it is less than 10
            bne $t2, $t3, check_uppercase #if it is greater than 10 it is invalid
            j loop2
+
+           check_uppercase:
+           	addi $t2, $s0, -65 #subtracts 48 from s0 and stores in t2 (to start from 0)
+           	sltiu $t2, $t2, 16 #checks if it is less than 10
+           	bne $t2, $t3, lower_case #if it is greater than 10 it is invalid
+           j loop2
+	
 print_invalid:
        li $v0, 4
        la $a0, message3 #displays invalid base 36 number
        syscall 
+end:
+   	li $v0, 10
+   	syscall
