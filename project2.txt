@@ -53,3 +53,5 @@ check:
            addi $t5, $t5, 1 #increases index by 1
            addi $t2, $s0, -48 #subtracts 48 from s0 and stores in t2 (to start from 0)
            sltiu $t2, $t2, 10 #checks if it is less than 10
+           bne $t2, $t3, check_uppercase #if it is greater than 10 it is invalid
+           j loop2
