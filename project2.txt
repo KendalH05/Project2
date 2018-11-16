@@ -48,3 +48,8 @@ check:
    	li $t3, 1
        loop2: 
            bgt $t0, $t1, solve #checks if t0 is greater than t1 then go to solve
+           addi $t0, $t0, 1 #adds 1 to t0
+           lb $s0, 0($t5) #loads the first element of t5(userinput) into s0
+           addi $t5, $t5, 1 #increases index by 1
+           addi $t2, $s0, -48 #subtracts 48 from s0 and stores in t2 (to start from 0)
+           sltiu $t2, $t2, 10 #checks if it is less than 10
