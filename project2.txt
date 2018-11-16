@@ -60,6 +60,11 @@ check:
            	addi $t2, $s0, -65 #subtracts 48 from s0 and stores in t2 (to start from 0)
            	sltiu $t2, $t2, 16 #checks if it is less than 10
            	bne $t2, $t3, lower_case #if it is greater than 10 it is invalid
+           lower_case:
+           	addi $t2, $s0, -97 #subtracts 48 from s0 and stores in t2 (to start from 0)
+           	sltiu $t2, $t2, 16 #checks if it is less than 10
+           	bne $t2, $t3, print_invalid #if it is greater than 10 it is invalid
+           j loop2
            j loop2
 	
 print_invalid:
