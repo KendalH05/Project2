@@ -25,6 +25,11 @@
         and $t3, $t3, $t5
         bne $t3, $t6, L3
         j delete_first_space
+ L3:	
+   	li $t5, 0
+        beq  $t2, $zero, out     # if y[i]==0 (null character),leave loop       
+        add  $t3, $a0, $t0       # $t3 holds address of x[i]
+        sb   $t2, 0($t3)         # x[i] = y[i]
 
 
 
